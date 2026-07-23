@@ -1,15 +1,15 @@
 const ITEMS = [
   {
-    title: "Fashion Shop",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&auto=format&fit=crop",
+    title: "Villa Relocation, Dubai",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
   },
   {
-    title: "Warehouse Inventory",
+    title: "Office Relocation Setup",
     img: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80&auto=format&fit=crop",
   },
   {
-    title: "Surface Cleaning",
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop",
+    title: "Secure Storage Facility",
+    img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80&auto=format&fit=crop",
   },
 ];
 
@@ -19,16 +19,16 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-6 mb-12 sm:mb-14 animate-fade-up text-center sm:text-left">
           <div>
-            <span className="text-brand-red font-semibold tracking-widest text-sm">RECENT WORKS</span>
+            <span className="text-brand-red font-semibold tracking-widest text-sm">OUR PROJECTS</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">
-              Proud to excellence deliver mover success
+              Recent moves completed across Dubai
             </h2>
           </div>
           <a
-            href="#"
+            href="#contact"
             className="bg-brand-red text-white font-semibold px-7 py-4 rounded-full hover:bg-brand-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-300 whitespace-nowrap"
           >
-            EXPLORE MORE
+            GET A FREE QUOTE
           </a>
         </div>
 

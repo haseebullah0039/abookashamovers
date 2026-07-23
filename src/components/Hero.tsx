@@ -24,31 +24,33 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20 md:py-28 grid md:grid-cols-2 items-center gap-8 md:gap-10">
         <div className="animate-fade-up text-center md:text-left">
           <span className="inline-block bg-white/10 text-white text-[11px] sm:text-xs font-semibold tracking-widest px-4 py-2 rounded-full mb-5 sm:mb-6 backdrop-blur-sm">
-            FLEXIBLE MOVER SERVICES
+            DUBAI&apos;S TRUSTED LOCAL MOVERS
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            CAREFUL MOVES <br />
-            <span className="text-brand-red">MADE EASY.</span>
+            PROFESSIONAL MOVERS <br />
+            <span className="text-brand-red">IN DUBAI.</span>
           </h1>
           <p className="text-white/70 mt-5 sm:mt-6 max-w-md mx-auto md:mx-0 text-sm sm:text-base">
-            Experience hassle-free premises with our transport service that solves the need for
-            unique and organized workflow effortless move.
+            ABO Okasha Movers delivers careful, road-based residential and office moving across
+            Dubai — professional packing, safe handling, and on-time delivery, every time.
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-7 sm:mt-8">
             <a
               href="#contact"
               className="bg-brand-red text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-lg shadow-red-900/40 hover:bg-white hover:text-brand-red hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
             >
-              GET A QUOTE
+              GET A FREE QUOTE
             </a>
             <a
-              href="#"
+              href="https://wa.me/971566006415"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 text-white font-semibold group"
             >
               <span className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 flex items-center justify-center text-xl group-hover:bg-brand-red group-hover:scale-110 transition-all duration-300 animate-pulse-ring">
                 ▶
               </span>
-              DISCOVER
+              WHATSAPP US
             </a>
           </div>
         </div>
@@ -72,8 +74,8 @@ export default function Hero() {
           <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-white rounded-2xl shadow-xl px-4 sm:px-6 py-3 sm:py-4 hidden sm:flex items-center gap-3 animate-float">
             <span className="text-3xl">🚚</span>
             <div>
-              <div className="font-bold text-brand-dark text-sm">20+ Years</div>
-              <div className="text-xs text-slate-500">of Experience</div>
+              <div className="font-bold text-brand-dark text-sm">100% Road-Based</div>
+              <div className="text-xs text-slate-500">Moving Service</div>
             </div>
           </div>
         </div>

@@ -1,13 +1,13 @@
 const FEATURES = [
   {
     icon: "🚛",
-    title: "Transport Solutions",
-    desc: "Master planned, moving strategy and every service provided.",
+    title: "Local Road Movers",
+    desc: "Dedicated moving trucks and trained crews for every home and office move in Dubai.",
   },
   {
     icon: "📦",
-    title: "Warehousing",
-    desc: "Master planned, moving strategy and every service provided.",
+    title: "Careful Packing",
+    desc: "Quality packing materials and safe handling to protect your furniture and belongings.",
   },
 ];
 
@@ -43,11 +43,12 @@ export default function About() {
         <div className="animate-fade-up delay-200 text-center md:text-left">
           <span className="text-brand-red font-semibold tracking-widest text-sm">ABOUT US</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-6 leading-snug">
-            We are the best moving <br className="hidden sm:block" /> company in the world.
+            Your trusted local moving <br className="hidden sm:block" /> partner in Dubai.
           </h2>
           <p className="text-slate-500 mb-8">
-            We endeavor to comprehend what they&apos;re going through, what does their comfort
-            level look like, and their needs, wants, and objectives at each and every stage.
+            ABO Okasha Movers is a Dubai-based moving company focused on one thing: getting your
+            home or office moved safely, on time, and without stress. Every move is handled by our
+            own trained team using dedicated trucks — no subcontractors, no surprises.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -71,7 +72,7 @@ export default function About() {
             href="#"
             className="inline-flex items-center gap-2 bg-brand-dark text-white font-semibold px-7 py-4 rounded-full hover:bg-brand-red hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
           >
-            KNOW MORE ABOUT US →
+            GET YOUR FREE QUOTE →
           </a>
         </div>
       </div>

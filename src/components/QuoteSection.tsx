@@ -9,8 +9,8 @@ const FEATURES = [
 
 const CONTACT_INFO = [
   { icon: "📞", label: "Call Us", value: "+971 56 600 6415", href: "tel:+971566006415" },
-  { icon: "✉️", label: "Email Us", value: "info@example.com", href: "mailto:info@example.com" },
-  { icon: "📍", label: "Service Area", value: "All 7 Emirates, UAE", href: "#" },
+  { icon: "✉️", label: "Email Us", value: "info@abookashamovers.com", href: "mailto:info@abookashamovers.com" },
+  { icon: "📍", label: "Service Area", value: "Dubai & Nearby Emirates", href: "#" },
 ];
 
 const CITIES = [

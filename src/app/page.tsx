@@ -14,6 +14,7 @@ import Partners from "@/components/Partners";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileSocialBar from "@/components/MobileSocialBar";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <MobileSocialBar />
     </>
   );
 }

@@ -1,8 +1,8 @@
 const STEPS = [
-  { num: "01", icon: "🖱️", title: "Online Quote", desc: "Fill out the request and get a quote instantly." },
-  { num: "02", icon: "📋", title: "Picking Product", desc: "We schedule pickup at your convenience of time." },
-  { num: "03", icon: "📦", title: "Product Packaging", desc: "Product packaged carefully with quality materials." },
-  { num: "04", icon: "🚚", title: "Safety Delivered", desc: "Delivered safely and on time at destination." },
+  { num: "01", icon: "🖱️", title: "Request A Quote", desc: "Tell us about your move and get a free, no-obligation quote." },
+  { num: "02", icon: "📋", title: "Schedule Your Move", desc: "We confirm a pickup time in Dubai that works for you." },
+  { num: "03", icon: "📦", title: "Pack & Load Carefully", desc: "Our crew packs and loads your items using quality materials." },
+  { num: "04", icon: "🚚", title: "Safe Road Delivery", desc: "Your move arrives safely and on time by road, every time." },
 ];
 
 export default function Process() {
@@ -10,9 +10,9 @@ export default function Process() {
     <section className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-fade-up">
-          <span className="text-brand-red font-semibold tracking-widest text-sm">WORKING PROCESS</span>
+          <span className="text-brand-red font-semibold tracking-widest text-sm">OUR PROCESS</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 px-2">
-            We always follow the best ways of moving
+            How our Dubai moving process works
           </h2>
         </div>
 

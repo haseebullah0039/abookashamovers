@@ -2,37 +2,37 @@ const SERVICES = [
   {
     icon: "🏠",
     title: "Residential Moving",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    desc: "Trusted house and apartment movers in Dubai — careful handling for every room, delivered safely to your new home.",
     img: "/Residential Moving.png",
   },
   {
     icon: "🛋️",
     title: "Furniture Moving",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    desc: "Specialist furniture movers in Dubai for sofas, wardrobes, and bulky items, dismantled and reassembled with care.",
     img: "/Furniture Moving.png",
   },
   {
     icon: "📦",
     title: "Packing & Unpacking",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    desc: "Professional packing services in Dubai using quality materials to keep your belongings protected in transit.",
     img: "/Packing & Unpacking.png",
   },
   {
     icon: "🏢",
     title: "Home & Office Relocation",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    desc: "Efficient residential and commercial relocation in Dubai, planned to minimise downtime and disruption.",
     img: "/Home & Office Relocation.png",
   },
   {
     icon: "🗄️",
-    title: "Storage",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    title: "Secure Storage Solutions",
+    desc: "Short and long-term storage in Dubai for your furniture and belongings, kept safe until you're ready.",
     img: "/storage.png",
   },
   {
     icon: "⚡",
-    title: "Fast & Reliable Service",
-    desc: "Supply chain of Organization moving with everything and packing.",
+    title: "Fast & Reliable Moving Service",
+    desc: "On-time, dependable moving trucks and crews across Dubai — book a slot that fits your schedule.",
     img: "/fast and reliable.png",
   },
 ];
@@ -45,7 +45,7 @@ export default function Services() {
         <div className="text-center mb-12 sm:mb-16 animate-fade-up">
           <span className="text-brand-red font-semibold tracking-widest text-sm">OUR SERVICES</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mt-3 px-2">
-            We are helping you to get moving solution
+            Professional moving services in Dubai
           </h2>
         </div>
 

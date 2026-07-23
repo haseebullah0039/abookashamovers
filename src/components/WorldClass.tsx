@@ -1,7 +1,7 @@
 const POINTS = [
-  { icon: "🌍", title: "Domestic and international Service" },
-  { icon: "🚚", title: "Multi model Transport Service" },
-  { icon: "🕒", title: "Dedicated & Time Bound deliveries" },
+  { icon: "🛣️", title: "100% Road-Based Moving — No Air or Sea Freight" },
+  { icon: "🚚", title: "Our Own Trucks & Trained Moving Crews" },
+  { icon: "🕒", title: "On-Time, Scheduled Door-to-Door Delivery" },
 ];
 
 export default function WorldClass() {
@@ -10,8 +10,8 @@ export default function WorldClass() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative animate-fade-up max-w-md mx-auto md:max-w-none">
           <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-brand-red text-white rounded-2xl px-4 sm:px-5 py-2.5 sm:py-3 shadow-xl z-10 hover:-translate-y-1 transition-transform duration-300">
-            <div className="font-extrabold text-lg leading-none">20+</div>
-            <div className="text-[10px] tracking-widest mt-1">YEARS EXP</div>
+            <div className="font-extrabold text-lg leading-none">100%</div>
+            <div className="text-[10px] tracking-widest mt-1">ROAD-BASED</div>
           </div>
           <img
             src="/Trusted movers.png"
@@ -24,11 +24,11 @@ export default function WorldClass() {
         <div className="animate-fade-up delay-200 text-center md:text-left">
           <span className="text-brand-red font-semibold tracking-widest text-sm">TRUSTED MOVER SERVICE</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-6 leading-snug">
-            World class moving &amp; packers services
+            Professional movers &amp; packers, only in Dubai
           </h2>
           <p className="text-slate-500 mb-8">
-            All movers and packers that work with us have gone through an exhaustive vetting
-            process, ensuring the safety of your possessions.
+            We focus exclusively on local road moving across Dubai — no air cargo, no sea freight,
+            no international shipping. Just careful, professional relocation from door to door.
           </p>
 
           <div className="space-y-5 mb-8 max-w-sm mx-auto md:max-w-none md:mx-0 text-left">

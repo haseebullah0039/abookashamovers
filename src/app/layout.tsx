@@ -9,8 +9,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Moverz - Careful Moves Made Easy",
-  description: "Professional moving, packing, transport and warehousing services.",
+  title: "ABO Okasha Movers | Best House & Furniture Movers in Dubai",
+  description:
+    "ABO Okasha Movers is a professional local moving company in Dubai, UAE. We offer residential moving, furniture moving, packing & unpacking, office relocation, and secure storage by road across Dubai. Get a free quote today.",
+  openGraph: {
+    title: "ABO Okasha Movers | Best House & Furniture Movers in Dubai",
+    description:
+      "Trusted local movers in Dubai for homes, offices, and furniture. Careful road-based moving, professional packing, and secure storage across Dubai and nearby areas.",
+    locale: "en_AE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

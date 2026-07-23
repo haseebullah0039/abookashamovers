@@ -1,7 +1,13 @@
 "use client";
 
-const SERVICES = ["Residential Moves", "Transportation", "Corporate Relocation", "Warehousing", "Storage"];
-const LINKS = ["About Us", "Our Services", "Our Team", "Latest Blog", "Contact Us"];
+const SERVICES = [
+  "Residential Moving",
+  "Furniture Moving",
+  "Packing & Unpacking",
+  "Home & Office Relocation",
+  "Secure Storage Solutions",
+];
+const LINKS = ["About Us", "Our Services", "Our Team", "Moving Tips & Guides", "Contact Us"];
 
 export default function Footer() {
   return (
@@ -10,11 +16,11 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 sm:pb-14 border-b border-white/10 text-center sm:text-left">
         <div>
           <div className="text-2xl font-extrabold text-white mb-4">
-            MOVER<span className="text-brand-red">Z</span>
+            ABO OKASHA <span className="text-brand-red">MOVERS</span>
           </div>
           <p className="text-white/40 text-sm mb-6">
-            Careful moves made easy with flexible, professional and dedicated mover services
-            worldwide.
+            A trusted local moving company in Dubai, offering professional road-based residential
+            and office moving, furniture handling, packing, and secure storage.
           </p>
           <div className="flex gap-3 justify-center sm:justify-start">
             {["f", "x", "in", "ig"].map((s) => (
@@ -77,7 +83,7 @@ export default function Footer() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-6 flex flex-wrap items-center justify-center sm:justify-between gap-4 text-white/30 text-xs text-center">
-        <span>© 2026 Moverz Theme by Trumsel | All Rights Reserved.</span>
+        <span>© 2026 ABO Okasha Movers | All Rights Reserved.</span>
         <div className="flex gap-6">
           <a href="#" className="hover:text-brand-red transition-colors duration-300">Privacy Policy</a>
           <a href="#" className="hover:text-brand-red transition-colors duration-300">Terms of Use</a>

@@ -36,7 +36,7 @@ export default function Header() {
         >
           <Image
             src="/Main Logo.png"
-            alt="MoverZ Logo"
+            alt="ABO Okasha Movers Logo"
             width={280}
             height={90}
             style={{ height: scrolled ? 60 : 70 }}
@@ -56,10 +56,10 @@ export default function Header() {
           <div className="pl-64 xl:pl-[19rem] pr-6 flex items-center justify-between">
             <div className="flex items-center gap-8">
               <span className="flex items-center gap-2 hover:text-white transition-colors">
-                <span className="text-brand-red">📍</span> 5th Street, 21st Floor, New York, USA
+                <span className="text-brand-red">📍</span> Al Quoz Industrial Area, Dubai, UAE
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors">
-                <span className="text-brand-red">✉️</span> info@example.com
+                <span className="text-brand-red">✉️</span> info@abookashamovers.com
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors ml-4 xl:ml-[150px]">
                 <span className="text-brand-red">🕒</span> Open Time: 8AM &ndash; Closing Time: 8PM
@@ -99,7 +99,7 @@ export default function Header() {
             <a href="#" className="flex lg:hidden items-center gap-2 ml-[20px] sm:ml-0">
               <Image
                 src="/Main Logo.png"
-                alt="MoverZ Logo"
+                alt="ABO Okasha Movers Logo"
                 width={180}
                 height={58}
                 className={`w-auto transition-all duration-300 ${

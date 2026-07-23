@@ -21,16 +21,16 @@ export default function Team() {
     <section id="team" className="py-16 sm:py-20 md:py-24 bg-slate-50 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="text-center text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tight mb-4 animate-fade-up">
-          <span className="text-outline">Mover</span>{" "}
+          <span className="text-outline">Dubai</span>{" "}
           <span className="text-brand-red">&amp;</span>
           <br />
-          <span className="text-brand-dark">Packers</span>
+          <span className="text-brand-dark">Movers</span>
         </h2>
 
         <div className="text-center mb-10 sm:mb-14 animate-fade-up delay-100">
-          <span className="text-brand-red font-semibold tracking-widest text-sm">OUR MEMBERS</span>
+          <span className="text-brand-red font-semibold tracking-widest text-sm">OUR TEAM</span>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark mt-2 px-4">
-            Meet our most experience team members
+            Meet our experienced moving team
           </h3>
         </div>
 

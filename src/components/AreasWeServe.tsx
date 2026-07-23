@@ -18,17 +18,17 @@ export default function AreasWeServe() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-fade-up max-w-2xl mx-auto">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            OUR COVERAGE
+            OUR SERVICE AREA
           </span>
           <h2
             id="areas-we-serve-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-4 leading-snug"
           >
-            Areas We Serve Across the UAE
+            Dubai-Based, Serving Nearby Emirates by Road
           </h2>
           <p className="text-slate-500 text-sm sm:text-base">
-            Providing professional moving, packing, furniture relocation, office moving, and
-            storage services across all major Emirates of the UAE.
+            ABO Okasha Movers is based in Dubai and provides professional residential, office, and
+            furniture moving by road across Dubai and neighbouring Emirates.
           </p>
         </div>
 

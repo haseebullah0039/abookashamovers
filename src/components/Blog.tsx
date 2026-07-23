@@ -1,17 +1,17 @@
 const POSTS = [
   {
-    date: "APRIL 26, 2025",
-    title: "Load Boosts Show Flat Demand & Higher Rates",
+    date: "MOVING TIPS",
+    title: "How to Choose the Best Movers in Dubai",
     img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80&auto=format&fit=crop",
   },
   {
-    date: "APRIL 25, 2025",
-    title: "Steps Involved in Packing The Consignment",
+    date: "PACKING GUIDE",
+    title: "A Complete Furniture Packing Guide for Dubai Moves",
     img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80&auto=format&fit=crop",
   },
   {
-    date: "APRIL 24, 2025",
-    title: "Our Home Entertainment Has Evolved Significantly",
+    date: "MOVING CHECKLIST",
+    title: "The Ultimate House Moving Checklist for Dubai Residents",
     img: "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&q=80&auto=format&fit=crop",
   },
 ];
@@ -22,9 +22,9 @@ export default function Blog() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-6 mb-12 sm:mb-14 animate-fade-up text-center sm:text-left">
           <div>
-            <span className="text-brand-red font-semibold tracking-widest text-sm">CLICK & NEWS</span>
+            <span className="text-brand-red font-semibold tracking-widest text-sm">MOVING TIPS & GUIDES</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">
-              What news do we have today, latest blog
+              Latest moving tips from our Dubai team
             </h2>
           </div>
           <a
