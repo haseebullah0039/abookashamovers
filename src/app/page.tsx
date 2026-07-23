@@ -37,9 +37,9 @@ export default function Home() {
         />
         <Testimonials />
         <Partners />
-        <Blog />
         <Team />
         <QuoteSection />
+        <Blog />
       </main>
       <Footer />
       <WhatsAppButton />

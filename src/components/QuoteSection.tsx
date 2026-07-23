@@ -1,10 +1,41 @@
 "use client";
 
-const SLIDERS = [
-  { label: "Road Freight", value: 80 },
-  { label: "Train Freight", value: 60 },
-  { label: "Ocean Freight", value: 45 },
+const FEATURES = [
+  "100% Road-Based Moving & Transport",
+  "Direct Door-to-Door Delivery Across the UAE",
+  "Careful Handling & Fully Insured Loads",
+  "On-Time, Scheduled & Same-Day Moves",
 ];
+
+const CONTACT_INFO = [
+  { icon: "📞", label: "Call Us", value: "+971 56 600 6415", href: "tel:+971566006415" },
+  { icon: "✉️", label: "Email Us", value: "info@example.com", href: "mailto:info@example.com" },
+  { icon: "📍", label: "Service Area", value: "All 7 Emirates, UAE", href: "#" },
+];
+
+const CITIES = [
+  "Dubai",
+  "Abu Dhabi",
+  "Sharjah",
+  "Ajman",
+  "Ras Al Khaimah",
+  "Fujairah",
+  "Umm Al Quwain",
+  "Al Ain",
+];
+
+const SERVICES = [
+  "Residential Moving",
+  "Furniture Moving",
+  "Packing & Unpacking",
+  "Home & Office Relocation",
+  "Storage",
+  "Fast & Reliable Service",
+];
+
+const fieldLabel = "block text-xs font-semibold text-slate-500 mb-1.5";
+const fieldInput =
+  "w-full border border-slate-200 rounded-lg px-4 py-3 text-sm text-brand-dark outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300";
 
 export default function QuoteSection() {
   return (
@@ -12,80 +43,107 @@ export default function QuoteSection() {
       <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-brand-red/10 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div className="animate-fade-up">
-          <span className="text-brand-red font-semibold tracking-widest text-sm">MOVING SAFETY</span>
+          <span className="text-brand-red font-semibold tracking-widest text-sm">ROAD MOVING EXPERTS</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-3 mb-6 leading-snug">
-            Efficient, safe, &amp; swift moving solution!
+            Reliable Road Moving Services Across the UAE
           </h2>
-          <p className="text-white/50 mb-10 max-w-md">
-            Move easy up to the big luggage getting rid look at, well then relax with the perfect
-            support that suits you for a stress-free, efficiently packaging and dedicated moving.
+          <p className="text-white/50 mb-8 max-w-md">
+            We specialize exclusively in professional road transport and relocation — no air or
+            sea freight. Every move is handled door-to-door by our own trained team, giving you
+            full control, speed, and care from pickup to delivery.
           </p>
 
-          <div className="space-y-6 max-w-md">
-            {SLIDERS.map((s) => (
-              <div key={s.label}>
-                <div className="flex justify-between text-sm text-white/70 mb-2 font-medium">
-                  <span>{s.label}</span>
-                  <span>{s.value}%</span>
-                </div>
-                <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-brand-red transition-all duration-1000 ease-out"
-                    style={{ width: `${s.value}%` }}
-                  />
-                </div>
-              </div>
+          <ul className="space-y-4 max-w-md mb-10">
+            {FEATURES.map((f) => (
+              <li key={f} className="flex items-start gap-3 text-white/80 text-sm sm:text-base">
+                <span className="shrink-0 w-6 h-6 rounded-full bg-brand-red/15 text-brand-red flex items-center justify-center text-xs mt-0.5">
+                  ✓
+                </span>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          <div className="grid sm:grid-cols-3 gap-4 max-w-lg">
+            {CONTACT_INFO.map((c) => (
+              <a
+                key={c.label}
+                href={c.href}
+                className="flex flex-col gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-red/40 rounded-xl px-4 py-4 transition-all duration-300"
+              >
+                <span className="text-xl">{c.icon}</span>
+                <span>
+                  <span className="block text-[11px] text-white/40 tracking-wide">{c.label}</span>
+                  <span className="block text-sm font-semibold text-white">{c.value}</span>
+                </span>
+              </a>
             ))}
           </div>
-
-          <p className="text-white/60 mt-10">
-            Have Any Question ? Call Us Free:{" "}
-            <a href="tel:+971566006415" className="text-brand-red font-bold hover:underline">
-              +971 56 600 6415
-            </a>
-          </p>
         </div>
 
         <div className="relative animate-fade-up delay-200">
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 relative z-10">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 md:p-10 relative z-10 border border-slate-100">
             <span className="text-brand-red font-semibold tracking-widest text-xs">GET IN TOUCH</span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-brand-dark mt-2 mb-6">Request A Quote</h3>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-brand-dark mt-2 mb-1">Request A Quote</h3>
+            <p className="text-slate-400 text-sm mb-6">
+              Fill in your details and our team will get back to you shortly.
+            </p>
             <form
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5"
               onSubmit={(e) => e.preventDefault()}
             >
-              <input
-                placeholder="Your Name"
-                className="sm:col-span-1 border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300"
-              />
-              <input
-                placeholder="Your Phone"
-                className="sm:col-span-1 border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300"
-              />
-              <input
-                placeholder="Your Email"
-                className="sm:col-span-1 border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300"
-              />
-              <input
-                placeholder="Subject"
-                className="sm:col-span-1 border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300"
-              />
-              <textarea
-                placeholder="Message"
-                rows={4}
-                className="sm:col-span-2 border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300 resize-none"
-              />
-              <button className="sm:col-span-2 bg-brand-red text-white font-semibold py-4 rounded-lg hover:bg-brand-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
+              <div>
+                <label className={fieldLabel}>Full Name</label>
+                <input placeholder="John Doe" className={fieldInput} />
+              </div>
+              <div>
+                <label className={fieldLabel}>Phone Number</label>
+                <input placeholder="+971 5X XXX XXXX" className={fieldInput} />
+              </div>
+              <div>
+                <label className={fieldLabel}>Email Address</label>
+                <input type="email" placeholder="you@example.com" className={fieldInput} />
+              </div>
+              <div>
+                <label className={fieldLabel}>City</label>
+                <select defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
+                  <option value="" disabled>
+                    Select your city
+                  </option>
+                  {CITIES.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="sm:col-span-2">
+                <label className={fieldLabel}>Service Needed</label>
+                <select defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
+                  <option value="" disabled>
+                    Select the service you need
+                  </option>
+                  {SERVICES.map((service) => (
+                    <option key={service} value={service}>
+                      {service}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="sm:col-span-2">
+                <label className={fieldLabel}>Message</label>
+                <textarea
+                  placeholder="Tell us more about your move (optional)"
+                  rows={4}
+                  className={`${fieldInput} resize-none`}
+                />
+              </div>
+              <button className="sm:col-span-2 bg-brand-red text-white font-semibold py-4 rounded-lg hover:bg-brand-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 inline-flex items-center justify-center gap-2">
                 GET A QUOTE
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
             </form>
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=80&auto=format&fit=crop"
-            alt="Delivery truck"
-            loading="lazy"
-            className="hidden xl:block absolute -bottom-10 -right-16 w-64 rounded-2xl shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition-transform duration-500"
-          />
         </div>
       </div>
     </section>
