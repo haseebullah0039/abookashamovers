@@ -45,7 +45,7 @@ export default function Services({ en, ar }: { en: Dictionary; ar: Dictionary })
                   {ar.services.items[i].desc}
                 </p>
                 <a
-                  href="#"
+                  href="#contact"
                   className="mt-auto text-xs font-semibold tracking-widest text-brand-red inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-300"
                 >
                   {en.services.learnMore}
