@@ -127,7 +127,7 @@ export default function Header({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                   }`}
                 >
                   <span className="block">{link.en}</span>
-                  <span className="block font-arabic text-[10px] xl:text-[11px] 2xl:text-xs" dir="rtl">
+                  <span className="block font-arabic text-[10px] xl:text-[11px] 2xl:text-xs" lang="ar" dir="rtl">
                     {link.ar}
                   </span>
                 </a>
@@ -160,7 +160,7 @@ export default function Header({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                 <span className="absolute inset-0 -translate-x-full bg-brand-red transition-transform duration-500 ease-out group-hover:translate-x-0" />
                 <span className="relative z-10 flex flex-col">
                   <span>{en.nav.getQuote}</span>
-                  <span className="font-arabic text-[10px]" dir="rtl">
+                  <span className="font-arabic text-[10px]" lang="ar" dir="rtl">
                     {ar.nav.getQuote}
                   </span>
                 </span>
@@ -195,7 +195,7 @@ export default function Header({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                 className="py-3 text-base font-bold text-brand-dark border-b border-slate-100 last:border-none hover:text-brand-red hover:pl-2 transition-all duration-200"
               >
                 <span className="block">{link.en}</span>
-                <span className="block font-arabic text-sm text-slate-400" dir="rtl">
+                <span className="block font-arabic text-sm text-slate-400" lang="ar" dir="rtl">
                   {link.ar}
                 </span>
               </a>
@@ -206,7 +206,7 @@ export default function Header({ en, ar }: { en: Dictionary; ar: Dictionary }) {
               className="mt-4 mb-2 bg-brand-red text-white text-sm font-bold text-center px-6 py-3.5 rounded-full hover:bg-brand-dark transition-colors duration-300"
             >
               <span className="block">{en.nav.getQuote}</span>
-              <span className="block font-arabic text-xs" dir="rtl">
+              <span className="block font-arabic text-xs" lang="ar" dir="rtl">
                 {ar.nav.getQuote}
               </span>
             </a>

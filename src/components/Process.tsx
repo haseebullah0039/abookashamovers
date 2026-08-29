@@ -6,12 +6,12 @@ export default function Process({ en, ar }: { en: Dictionary; ar: Dictionary }) 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-fade-up">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.process.kicker} <span className="font-arabic" dir="rtl">/ {ar.process.kicker}</span>
+            {en.process.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.process.kicker}</span>
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 px-2">
             {en.process.title}
           </h2>
-          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mt-1 px-2" dir="rtl">
+          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mt-1 px-2" lang="ar" dir="rtl">
             {ar.process.title}
           </h3>
         </div>
@@ -33,11 +33,11 @@ export default function Process({ en, ar }: { en: Dictionary; ar: Dictionary }) 
               <h3 className="font-bold text-brand-dark mb-1 group-hover:text-brand-red transition-colors duration-300">
                 {s.title}
               </h3>
-              <h4 className="font-arabic font-bold text-brand-dark/80 mb-2 group-hover:text-brand-red transition-colors duration-300" dir="rtl">
+              <h4 className="font-arabic font-bold text-brand-dark/80 mb-2 group-hover:text-brand-red transition-colors duration-300" lang="ar" dir="rtl">
                 {ar.process.steps[i].title}
               </h4>
               <p className="text-sm text-slate-500 max-w-[220px] mx-auto">{s.desc}</p>
-              <p className="font-arabic text-sm text-slate-500 max-w-[220px] mx-auto mt-1" dir="rtl">
+              <p className="font-arabic text-sm text-slate-500 max-w-[220px] mx-auto mt-1" lang="ar" dir="rtl">
                 {ar.process.steps[i].desc}
               </p>
             </div>

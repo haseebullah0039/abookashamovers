@@ -57,16 +57,16 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div className="animate-fade-up">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.quote.kicker} <span className="font-arabic" dir="rtl">/ {ar.quote.kicker}</span>
+            {en.quote.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.quote.kicker}</span>
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-3 mb-1 leading-snug">
             {en.quote.title}
           </h2>
-          <h3 className="font-arabic text-2xl md:text-3xl font-extrabold text-white/80 mb-6 leading-snug" dir="rtl">
+          <h3 className="font-arabic text-2xl md:text-3xl font-extrabold text-white/80 mb-6 leading-snug" lang="ar" dir="rtl">
             {ar.quote.title}
           </h3>
           <p className="text-white/50 mb-2 max-w-md">{en.quote.desc}</p>
-          <p className="font-arabic text-white/40 mb-8 max-w-md" dir="rtl">
+          <p className="font-arabic text-white/40 mb-8 max-w-md" lang="ar" dir="rtl">
             {ar.quote.desc}
           </p>
 
@@ -78,7 +78,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
                 </span>
                 <span>
                   <span className="block">{f}</span>
-                  <span className="font-arabic block text-white/60 text-sm" dir="rtl">
+                  <span className="font-arabic block text-white/60 text-sm" lang="ar" dir="rtl">
                     {ar.quote.features[i]}
                   </span>
                 </span>
@@ -96,7 +96,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
                 <span className="text-xl">{c.icon}</span>
                 <span className="min-w-0">
                   <span className="block text-[11px] text-white/40 tracking-wide">{c.label}</span>
-                  <span className="block font-arabic text-[11px] text-white/30 tracking-wide" dir="rtl">
+                  <span className="block font-arabic text-[11px] text-white/30 tracking-wide" lang="ar" dir="rtl">
                     {ar.quote.contactInfo[i].label}
                   </span>
                   <span className="block text-sm font-semibold text-white break-words mt-1">{c.value}</span>
@@ -109,14 +109,14 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
         <div className="relative animate-fade-up delay-200">
           <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 md:p-10 relative z-10 border border-slate-100">
             <span className="text-brand-red font-semibold tracking-widest text-xs">
-              {en.quote.formKicker} <span className="font-arabic" dir="rtl">/ {ar.quote.formKicker}</span>
+              {en.quote.formKicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.quote.formKicker}</span>
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-brand-dark mt-2 mb-1">{en.quote.formTitle}</h3>
-            <h4 className="font-arabic text-lg sm:text-xl font-extrabold text-brand-dark/80 mb-1" dir="rtl">
+            <h4 className="font-arabic text-lg sm:text-xl font-extrabold text-brand-dark/80 mb-1" lang="ar" dir="rtl">
               {ar.quote.formTitle}
             </h4>
             <p className="text-slate-400 text-sm mb-1">{en.quote.formDesc}</p>
-            <p className="font-arabic text-slate-400 text-sm mb-6" dir="rtl">
+            <p className="font-arabic text-slate-400 text-sm mb-6" lang="ar" dir="rtl">
               {ar.quote.formDesc}
             </p>
             <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" onSubmit={handleSubmit}>
@@ -131,7 +131,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
               />
               <div>
                 <label className={fieldLabel}>
-                  {en.quote.fields.fullName} / <span className="font-arabic" dir="rtl">{ar.quote.fields.fullName}</span>
+                  {en.quote.fields.fullName} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.fullName}</span>
                 </label>
                 <input
                   name="fullName"
@@ -142,19 +142,19 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
               </div>
               <div>
                 <label className={fieldLabel}>
-                  {en.quote.fields.phone} / <span className="font-arabic" dir="rtl">{ar.quote.fields.phone}</span>
+                  {en.quote.fields.phone} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.phone}</span>
                 </label>
                 <input name="phone" required type="tel" placeholder={en.quote.fields.phonePh} className={fieldInput} />
               </div>
               <div>
                 <label className={fieldLabel}>
-                  {en.quote.fields.email} / <span className="font-arabic" dir="rtl">{ar.quote.fields.email}</span>
+                  {en.quote.fields.email} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.email}</span>
                 </label>
                 <input name="email" required type="email" placeholder={en.quote.fields.emailPh} className={fieldInput} />
               </div>
               <div>
                 <label className={fieldLabel}>
-                  {en.quote.fields.city} / <span className="font-arabic" dir="rtl">{ar.quote.fields.city}</span>
+                  {en.quote.fields.city} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.city}</span>
                 </label>
                 <select name="city" defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
                   <option value="" disabled>
@@ -169,7 +169,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
               </div>
               <div className="sm:col-span-2">
                 <label className={fieldLabel}>
-                  {en.quote.fields.service} / <span className="font-arabic" dir="rtl">{ar.quote.fields.service}</span>
+                  {en.quote.fields.service} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.service}</span>
                 </label>
                 <select name="service" defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
                   <option value="" disabled>
@@ -184,7 +184,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
               </div>
               <div className="sm:col-span-2">
                 <label className={fieldLabel}>
-                  {en.quote.fields.message} / <span className="font-arabic" dir="rtl">{ar.quote.fields.message}</span>
+                  {en.quote.fields.message} / <span className="font-arabic" lang="ar" dir="rtl">{ar.quote.fields.message}</span>
                 </label>
                 <textarea
                   name="message"
@@ -197,7 +197,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
               {status === "success" && (
                 <div className="sm:col-span-2 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3">
                   Thanks! Your request has been sent — we&apos;ll get back to you shortly.
-                  <span className="font-arabic block mt-1" dir="rtl">
+                  <span className="font-arabic block mt-1" lang="ar" dir="rtl">
                     شكراً لك! تم إرسال طلبك بنجاح، سنتواصل معك قريباً.
                   </span>
                 </div>
@@ -217,7 +217,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
                   {status === "submitting" ? "SENDING..." : en.quote.submit}
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </span>
-                <span className="font-arabic text-xs" dir="rtl">
+                <span className="font-arabic text-xs" lang="ar" dir="rtl">
                   {ar.quote.submit}
                 </span>
               </button>

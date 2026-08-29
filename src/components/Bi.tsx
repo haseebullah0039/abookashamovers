@@ -12,7 +12,7 @@ export function Bi({
   return (
     <span className={className}>
       {en}
-      <span dir="rtl" className={`font-arabic block ${arClassName}`}>
+      <span lang="ar" dir="rtl" className={`font-arabic block ${arClassName}`}>
         {ar}
       </span>
     </span>
@@ -30,7 +30,7 @@ export function BiInline({
 }) {
   return (
     <span className={className}>
-      {en} <span dir="rtl" className="font-arabic">/ {ar}</span>
+      {en} <span lang="ar" dir="rtl" className="font-arabic">/ {ar}</span>
     </span>
   );
 }

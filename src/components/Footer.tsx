@@ -11,11 +11,11 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
           <div className="text-2xl font-extrabold text-white mb-1">
             {en.footer.brand} <span className="text-brand-red">{en.footer.brandRed}</span>
           </div>
-          <div className="font-arabic text-lg font-extrabold text-white/70 mb-4" dir="rtl">
+          <div className="font-arabic text-lg font-extrabold text-white/70 mb-4" lang="ar" dir="rtl">
             {ar.footer.brand} <span className="text-brand-red">{ar.footer.brandRed}</span>
           </div>
           <p className="text-white/40 text-sm mb-1">{en.footer.desc}</p>
-          <p className="font-arabic text-white/30 text-sm mb-6" dir="rtl">
+          <p className="font-arabic text-white/30 text-sm mb-6" lang="ar" dir="rtl">
             {ar.footer.desc}
           </p>
           <div className="flex gap-3 justify-center sm:justify-start">
@@ -41,7 +41,7 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
 
         <div>
           <h4 className="text-white font-bold mb-1">
-            {en.footer.servicesTitle} <span className="font-arabic text-white/60" dir="rtl">/ {ar.footer.servicesTitle}</span>
+            {en.footer.servicesTitle} <span className="font-arabic text-white/60" lang="ar" dir="rtl">/ {ar.footer.servicesTitle}</span>
           </h4>
           <ul className="space-y-3 mt-4">
             {en.footer.services.map((s, i) => (
@@ -51,7 +51,7 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                   className="text-white/40 text-sm hover:text-brand-red hover:pl-2 transition-all duration-300 block"
                 >
                   <span className="block">{s}</span>
-                  <span className="font-arabic block text-white/30 text-xs" dir="rtl">
+                  <span className="font-arabic block text-white/30 text-xs" lang="ar" dir="rtl">
                     {ar.footer.services[i]}
                   </span>
                 </a>
@@ -62,7 +62,7 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
 
         <div>
           <h4 className="text-white font-bold mb-1">
-            {en.footer.linksTitle} <span className="font-arabic text-white/60" dir="rtl">/ {ar.footer.linksTitle}</span>
+            {en.footer.linksTitle} <span className="font-arabic text-white/60" lang="ar" dir="rtl">/ {ar.footer.linksTitle}</span>
           </h4>
           <ul className="space-y-3 mt-4">
             {en.footer.links.map((s, i) => (
@@ -72,7 +72,7 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                   className="text-white/40 text-sm hover:text-brand-red hover:pl-2 transition-all duration-300 block"
                 >
                   <span className="block">{s}</span>
-                  <span className="font-arabic block text-white/30 text-xs" dir="rtl">
+                  <span className="font-arabic block text-white/30 text-xs" lang="ar" dir="rtl">
                     {ar.footer.links[i]}
                   </span>
                 </a>
@@ -83,10 +83,10 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
 
         <div>
           <h4 className="text-white font-bold mb-1">
-            {en.footer.newsletterTitle} <span className="font-arabic text-white/60" dir="rtl">/ {ar.footer.newsletterTitle}</span>
+            {en.footer.newsletterTitle} <span className="font-arabic text-white/60" lang="ar" dir="rtl">/ {ar.footer.newsletterTitle}</span>
           </h4>
           <p className="text-white/40 text-sm mb-1 mt-4">{en.footer.newsletterDesc}</p>
-          <p className="font-arabic text-white/30 text-sm mb-4" dir="rtl">
+          <p className="font-arabic text-white/30 text-sm mb-4" lang="ar" dir="rtl">
             {ar.footer.newsletterDesc}
           </p>
           <form className="flex" onSubmit={(e) => e.preventDefault()}>
@@ -103,14 +103,14 @@ export default function Footer({ en, ar }: { en: Dictionary; ar: Dictionary }) {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-6 flex flex-wrap items-center justify-center sm:justify-between gap-4 text-white/30 text-xs text-center">
         <span>
-          {en.footer.copyright} <span className="font-arabic" dir="rtl">/ {ar.footer.copyright}</span>
+          {en.footer.copyright} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.footer.copyright}</span>
         </span>
         <div className="flex gap-6">
           <a href="#" className="hover:text-brand-red transition-colors duration-300">
-            {en.footer.privacy} / <span className="font-arabic" dir="rtl">{ar.footer.privacy}</span>
+            {en.footer.privacy} / <span className="font-arabic" lang="ar" dir="rtl">{ar.footer.privacy}</span>
           </a>
           <a href="#" className="hover:text-brand-red transition-colors duration-300">
-            {en.footer.terms} / <span className="font-arabic" dir="rtl">{ar.footer.terms}</span>
+            {en.footer.terms} / <span className="font-arabic" lang="ar" dir="rtl">{ar.footer.terms}</span>
           </a>
         </div>
       </div>

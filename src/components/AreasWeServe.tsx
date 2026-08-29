@@ -9,7 +9,7 @@ export default function AreasWeServe({ en, ar }: { en: Dictionary; ar: Dictionar
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-fade-up max-w-2xl mx-auto">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.areas.kicker} <span className="font-arabic" dir="rtl">/ {ar.areas.kicker}</span>
+            {en.areas.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.areas.kicker}</span>
           </span>
           <h2
             id="areas-we-serve-heading"
@@ -17,11 +17,11 @@ export default function AreasWeServe({ en, ar }: { en: Dictionary; ar: Dictionar
           >
             {en.areas.title}
           </h2>
-          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-4 leading-snug" dir="rtl">
+          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-4 leading-snug" lang="ar" dir="rtl">
             {ar.areas.title}
           </h3>
           <p className="text-slate-500 text-sm sm:text-base">{en.areas.desc}</p>
-          <p className="font-arabic text-slate-500 text-sm sm:text-base mt-1" dir="rtl">
+          <p className="font-arabic text-slate-500 text-sm sm:text-base mt-1" lang="ar" dir="rtl">
             {ar.areas.desc}
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function AreasWeServe({ en, ar }: { en: Dictionary; ar: Dictionar
               <h3 className="mt-4 font-bold text-brand-dark text-sm sm:text-base group-hover:text-brand-red transition-colors duration-300">
                 {city.name}
               </h3>
-              <h4 className="font-arabic text-brand-dark/70 text-sm group-hover:text-brand-red transition-colors duration-300" dir="rtl">
+              <h4 className="font-arabic text-brand-dark/70 text-sm group-hover:text-brand-red transition-colors duration-300" lang="ar" dir="rtl">
                 {ar.areas.cities[i].name}
               </h4>
             </li>

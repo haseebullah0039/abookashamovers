@@ -31,16 +31,16 @@ export default function About({ en, ar }: { en: Dictionary; ar: Dictionary }) {
 
         <div className="animate-fade-up delay-200 text-center md:text-left">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.about.kicker} <span className="font-arabic" dir="rtl">/ {ar.about.kicker}</span>
+            {en.about.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.about.kicker}</span>
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-1 leading-snug">
             {en.about.titleLine1} <br className="hidden sm:block" /> {en.about.titleLine2}
           </h2>
-          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-6 leading-snug" dir="rtl">
+          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-6 leading-snug" lang="ar" dir="rtl">
             {ar.about.titleLine1} {ar.about.titleLine2}
           </h3>
           <p className="text-slate-500 mb-2">{en.about.desc}</p>
-          <p className="font-arabic text-slate-500 mb-8" dir="rtl">
+          <p className="font-arabic text-slate-500 mb-8" lang="ar" dir="rtl">
             {ar.about.desc}
           </p>
 
@@ -55,11 +55,11 @@ export default function About({ en, ar }: { en: Dictionary; ar: Dictionary }) {
                 </span>
                 <div>
                   <h4 className="font-bold text-brand-dark mb-1">{f.title}</h4>
-                  <h4 className="font-arabic font-bold text-brand-dark/80 mb-1" dir="rtl">
+                  <h4 className="font-arabic font-bold text-brand-dark/80 mb-1" lang="ar" dir="rtl">
                     {ar.about.features[i].title}
                   </h4>
                   <p className="text-sm text-slate-500">{f.desc}</p>
-                  <p className="font-arabic text-sm text-slate-500 mt-1" dir="rtl">
+                  <p className="font-arabic text-sm text-slate-500 mt-1" lang="ar" dir="rtl">
                     {ar.about.features[i].desc}
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function About({ en, ar }: { en: Dictionary; ar: Dictionary }) {
             className="inline-flex flex-col items-center gap-1 bg-brand-dark text-white font-semibold px-7 py-4 rounded-full hover:bg-brand-red hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
           >
             <span>{en.about.cta}</span>
-            <span className="font-arabic text-xs" dir="rtl">
+            <span className="font-arabic text-xs" lang="ar" dir="rtl">
               {ar.about.cta}
             </span>
           </a>

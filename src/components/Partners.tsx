@@ -6,7 +6,7 @@ export default function Partners({ en, ar }: { en: Dictionary; ar: Dictionary })
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-8">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.partners.title} <span className="font-arabic" dir="rtl">/ {ar.partners.title}</span>
+            {en.partners.title} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.partners.title}</span>
           </span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
@@ -20,7 +20,7 @@ export default function Partners({ en, ar }: { en: Dictionary; ar: Dictionary })
               </span>
               <span
                 className="font-arabic text-slate-400 text-xs sm:text-sm mt-1 group-hover:text-brand-red transition-colors duration-300"
-                dir="rtl"
+                lang="ar" dir="rtl"
               >
                 {ar.partners.logos[i]}
               </span>

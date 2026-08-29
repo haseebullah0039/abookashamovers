@@ -41,7 +41,7 @@ export default function Hero({ en, ar }: { en: Dictionary; ar: Dictionary }) {
         <div className="animate-fade-up text-center md:text-left">
           <span className="inline-flex flex-col bg-white/10 text-white text-[11px] sm:text-xs font-semibold tracking-widest px-4 py-2 rounded-full mb-5 sm:mb-6 backdrop-blur-sm">
             <span>{en.hero.badge}</span>
-            <span className="font-arabic" dir="rtl">
+            <span className="font-arabic" lang="ar" dir="rtl">
               {ar.hero.badge}
             </span>
           </span>
@@ -49,13 +49,13 @@ export default function Hero({ en, ar }: { en: Dictionary; ar: Dictionary }) {
             {en.hero.titleLine1} <br />
             <span className="text-brand-red">{en.hero.titleLine2}</span>
           </h1>
-          <h2 className="font-arabic text-2xl sm:text-3xl md:text-4xl font-extrabold text-white/90 leading-snug mt-2" dir="rtl">
+          <h2 className="font-arabic text-2xl sm:text-3xl md:text-4xl font-extrabold text-white/90 leading-snug mt-2" lang="ar" dir="rtl">
             {ar.hero.titleLine1} <span className="text-brand-red">{ar.hero.titleLine2}</span>
           </h2>
           <p className="text-white/70 mt-5 sm:mt-6 max-w-md mx-auto md:mx-0 text-sm sm:text-base">
             {en.hero.desc}
           </p>
-          <p className="font-arabic text-white/60 mt-2 max-w-md mx-auto md:mx-0 text-sm sm:text-base" dir="rtl">
+          <p className="font-arabic text-white/60 mt-2 max-w-md mx-auto md:mx-0 text-sm sm:text-base" lang="ar" dir="rtl">
             {ar.hero.desc}
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-7 sm:mt-8">
@@ -64,7 +64,7 @@ export default function Hero({ en, ar }: { en: Dictionary; ar: Dictionary }) {
               className="flex flex-col items-center bg-brand-red text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-lg shadow-red-900/40 hover:bg-white hover:text-brand-red hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
             >
               <span>{en.hero.ctaQuote}</span>
-              <span className="font-arabic text-xs" dir="rtl">
+              <span className="font-arabic text-xs" lang="ar" dir="rtl">
                 {ar.hero.ctaQuote}
               </span>
             </a>
@@ -78,7 +78,7 @@ export default function Hero({ en, ar }: { en: Dictionary; ar: Dictionary }) {
               </span>
               <span className="flex flex-col text-left">
                 <span>{en.hero.ctaWatchVideo}</span>
-                <span className="font-arabic text-xs text-white/70" dir="rtl">
+                <span className="font-arabic text-xs text-white/70" lang="ar" dir="rtl">
                   {ar.hero.ctaWatchVideo}
                 </span>
               </span>
@@ -107,7 +107,7 @@ export default function Hero({ en, ar }: { en: Dictionary; ar: Dictionary }) {
             <div>
               <div className="font-bold text-brand-dark text-sm">{en.hero.badgeCard1}</div>
               <div className="text-xs text-slate-500">
-                {en.hero.badgeCard2} <span className="font-arabic" dir="rtl">/ {ar.hero.badgeCard2}</span>
+                {en.hero.badgeCard2} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.hero.badgeCard2}</span>
               </div>
             </div>
           </div>

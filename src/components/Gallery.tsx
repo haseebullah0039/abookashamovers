@@ -7,12 +7,12 @@ export default function Gallery({ en, ar }: { en: Dictionary; ar: Dictionary }) 
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-6 mb-12 sm:mb-14 animate-fade-up text-center sm:text-left">
           <div>
             <span className="text-brand-red font-semibold tracking-widest text-sm">
-              {en.gallery.kicker} <span className="font-arabic" dir="rtl">/ {ar.gallery.kicker}</span>
+              {en.gallery.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.gallery.kicker}</span>
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">
               {en.gallery.title}
             </h2>
-            <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mt-1" dir="rtl">
+            <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mt-1" lang="ar" dir="rtl">
               {ar.gallery.title}
             </h3>
           </div>
@@ -21,7 +21,7 @@ export default function Gallery({ en, ar }: { en: Dictionary; ar: Dictionary }) 
             className="flex flex-col items-center bg-brand-red text-white font-semibold px-7 py-3.5 rounded-full hover:bg-brand-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-300 whitespace-nowrap"
           >
             <span>{en.gallery.cta}</span>
-            <span className="font-arabic text-xs" dir="rtl">
+            <span className="font-arabic text-xs" lang="ar" dir="rtl">
               {ar.gallery.cta}
             </span>
           </a>
@@ -44,7 +44,7 @@ export default function Gallery({ en, ar }: { en: Dictionary; ar: Dictionary }) 
               <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center justify-between">
                 <div>
                   <h3 className="text-white font-bold text-lg">{it.title}</h3>
-                  <h4 className="font-arabic text-white/70 text-sm" dir="rtl">
+                  <h4 className="font-arabic text-white/70 text-sm" lang="ar" dir="rtl">
                     {ar.gallery.items[i].title}
                   </h4>
                 </div>

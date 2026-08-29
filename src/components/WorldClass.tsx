@@ -8,7 +8,7 @@ export default function WorldClass({ en, ar }: { en: Dictionary; ar: Dictionary 
           <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-brand-red text-white rounded-2xl px-4 sm:px-5 py-2.5 sm:py-3 shadow-xl z-10 hover:-translate-y-1 transition-transform duration-300">
             <div className="font-extrabold text-lg leading-none">{en.worldClass.badge1}</div>
             <div className="text-[10px] tracking-widest mt-1">{en.worldClass.badge2}</div>
-            <div className="font-arabic text-[10px] tracking-widest" dir="rtl">{ar.worldClass.badge2}</div>
+            <div className="font-arabic text-[10px] tracking-widest" lang="ar" dir="rtl">{ar.worldClass.badge2}</div>
           </div>
           <img
             src="/Trusted movers.webp"
@@ -20,16 +20,16 @@ export default function WorldClass({ en, ar }: { en: Dictionary; ar: Dictionary 
 
         <div className="animate-fade-up delay-200 text-center md:text-left">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.worldClass.kicker} <span className="font-arabic" dir="rtl">/ {ar.worldClass.kicker}</span>
+            {en.worldClass.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.worldClass.kicker}</span>
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-1 leading-snug">
             {en.worldClass.title}
           </h2>
-          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-6 leading-snug" dir="rtl">
+          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-dark/80 mb-6 leading-snug" lang="ar" dir="rtl">
             {ar.worldClass.title}
           </h3>
           <p className="text-slate-500 mb-2">{en.worldClass.desc}</p>
-          <p className="font-arabic text-slate-500 mb-8" dir="rtl">
+          <p className="font-arabic text-slate-500 mb-8" lang="ar" dir="rtl">
             {ar.worldClass.desc}
           </p>
 
@@ -46,7 +46,7 @@ export default function WorldClass({ en, ar }: { en: Dictionary; ar: Dictionary 
                   <span className="block font-semibold text-brand-dark group-hover:text-brand-red transition-colors duration-300">
                     {p.title}
                   </span>
-                  <span className="block font-arabic text-sm text-brand-dark/70 group-hover:text-brand-red transition-colors duration-300" dir="rtl">
+                  <span className="block font-arabic text-sm text-brand-dark/70 group-hover:text-brand-red transition-colors duration-300" lang="ar" dir="rtl">
                     {ar.worldClass.points[i].title}
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export default function WorldClass({ en, ar }: { en: Dictionary; ar: Dictionary 
             className="inline-flex flex-col items-center gap-1 bg-brand-red text-white font-semibold px-7 py-4 rounded-full hover:bg-brand-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
           >
             <span>{en.worldClass.cta}</span>
-            <span className="font-arabic text-xs" dir="rtl">
+            <span className="font-arabic text-xs" lang="ar" dir="rtl">
               {ar.worldClass.cta}
             </span>
           </a>

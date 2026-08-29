@@ -35,12 +35,12 @@ export default function Testimonials({ en, ar }: { en: Dictionary; ar: Dictionar
 
         <div className="animate-fade-up delay-200 text-center lg:text-left">
           <span className="text-brand-red font-semibold tracking-widest text-sm">
-            {en.testimonials.kicker} <span className="font-arabic" dir="rtl">/ {ar.testimonials.kicker}</span>
+            {en.testimonials.kicker} <span className="font-arabic" lang="ar" dir="rtl">/ {ar.testimonials.kicker}</span>
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mt-3 mb-1">
             {en.testimonials.title}
           </h2>
-          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-white/80 mb-6" dir="rtl">
+          <h3 className="font-arabic text-xl sm:text-2xl md:text-3xl font-extrabold text-white/80 mb-6" lang="ar" dir="rtl">
             {ar.testimonials.title}
           </h3>
 
@@ -50,7 +50,7 @@ export default function Testimonials({ en, ar }: { en: Dictionary; ar: Dictionar
               <p className="text-white/60 text-base sm:text-lg mb-3 max-w-lg mx-auto lg:mx-0">
                 {item.quote}
               </p>
-              <p className="font-arabic text-white/50 text-base sm:text-lg mb-8 max-w-lg mx-auto lg:mx-0" dir="rtl">
+              <p className="font-arabic text-white/50 text-base sm:text-lg mb-8 max-w-lg mx-auto lg:mx-0" lang="ar" dir="rtl">
                 {arItem.quote}
               </p>
               <div className="flex items-center justify-center lg:justify-start gap-4">
@@ -62,7 +62,7 @@ export default function Testimonials({ en, ar }: { en: Dictionary; ar: Dictionar
                 <div>
                   <div className="text-white font-bold">{item.customerName}</div>
                   <div className="text-white/40 text-sm">{item.customerTag}</div>
-                  <div className="font-arabic text-white/40 text-sm" dir="rtl">
+                  <div className="font-arabic text-white/40 text-sm" lang="ar" dir="rtl">
                     {arItem.customerName} — {arItem.customerTag}
                   </div>
                 </div>
