@@ -1,12 +1,56 @@
 "use client";
 
+import { useState } from "react";
+import type { FormEvent } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 const fieldLabel = "block text-xs font-semibold text-slate-500 mb-1.5";
 const fieldInput =
   "w-full border border-slate-200 rounded-lg px-4 py-3 text-sm text-brand-dark outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all duration-300";
 
+type Status = "idle" | "submitting" | "success" | "error";
+
 export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionary }) {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    // Honeypot: real visitors never touch this field.
+    if (data.get("website")) return;
+
+    setStatus("submitting");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: data.get("fullName"),
+          phone: data.get("phone"),
+          email: data.get("email"),
+          city: data.get("city"),
+          service: data.get("service"),
+          message: data.get("message"),
+          website: data.get("website"),
+        }),
+      });
+      const result = await res.json();
+      if (!res.ok || !result.ok) {
+        throw new Error(result.error || "Something went wrong. Please try again.");
+      }
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    }
+  }
+
   return (
     <section id="contact" className="py-16 sm:py-20 md:py-24 bg-brand-dark relative overflow-hidden">
       <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-brand-red/10 blur-3xl" />
@@ -75,33 +119,44 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
             <p className="font-arabic text-slate-400 text-sm mb-6" dir="rtl">
               {ar.quote.formDesc}
             </p>
-            <form
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5"
-              onSubmit={(e) => e.preventDefault()}
-            >
+            <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" onSubmit={handleSubmit}>
+              {/* Honeypot: hidden from real users, catches bots */}
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div>
                 <label className={fieldLabel}>
                   {en.quote.fields.fullName} / <span className="font-arabic" dir="rtl">{ar.quote.fields.fullName}</span>
                 </label>
-                <input placeholder={`${en.quote.fields.fullNamePh} / ${ar.quote.fields.fullNamePh}`} className={fieldInput} />
+                <input
+                  name="fullName"
+                  required
+                  placeholder={`${en.quote.fields.fullNamePh} / ${ar.quote.fields.fullNamePh}`}
+                  className={fieldInput}
+                />
               </div>
               <div>
                 <label className={fieldLabel}>
                   {en.quote.fields.phone} / <span className="font-arabic" dir="rtl">{ar.quote.fields.phone}</span>
                 </label>
-                <input placeholder={en.quote.fields.phonePh} className={fieldInput} />
+                <input name="phone" required type="tel" placeholder={en.quote.fields.phonePh} className={fieldInput} />
               </div>
               <div>
                 <label className={fieldLabel}>
                   {en.quote.fields.email} / <span className="font-arabic" dir="rtl">{ar.quote.fields.email}</span>
                 </label>
-                <input type="email" placeholder={en.quote.fields.emailPh} className={fieldInput} />
+                <input name="email" required type="email" placeholder={en.quote.fields.emailPh} className={fieldInput} />
               </div>
               <div>
                 <label className={fieldLabel}>
                   {en.quote.fields.city} / <span className="font-arabic" dir="rtl">{ar.quote.fields.city}</span>
                 </label>
-                <select defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
+                <select name="city" defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
                   <option value="" disabled>
                     {en.quote.fields.cityPh} / {ar.quote.fields.cityPh}
                   </option>
@@ -116,7 +171,7 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
                 <label className={fieldLabel}>
                   {en.quote.fields.service} / <span className="font-arabic" dir="rtl">{ar.quote.fields.service}</span>
                 </label>
-                <select defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
+                <select name="service" defaultValue="" className={`${fieldInput} appearance-none bg-white`}>
                   <option value="" disabled>
                     {en.quote.fields.servicePh} / {ar.quote.fields.servicePh}
                   </option>
@@ -132,14 +187,34 @@ export default function QuoteSection({ en, ar }: { en: Dictionary; ar: Dictionar
                   {en.quote.fields.message} / <span className="font-arabic" dir="rtl">{ar.quote.fields.message}</span>
                 </label>
                 <textarea
+                  name="message"
                   placeholder={en.quote.fields.messagePh}
                   rows={4}
                   className={`${fieldInput} resize-none`}
                 />
               </div>
-              <button className="sm:col-span-2 bg-brand-red text-white font-semibold py-4 rounded-lg hover:bg-brand-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 inline-flex flex-col items-center justify-center gap-0.5">
+
+              {status === "success" && (
+                <div className="sm:col-span-2 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3">
+                  Thanks! Your request has been sent — we&apos;ll get back to you shortly.
+                  <span className="font-arabic block mt-1" dir="rtl">
+                    شكراً لك! تم إرسال طلبك بنجاح، سنتواصل معك قريباً.
+                  </span>
+                </div>
+              )}
+              {status === "error" && (
+                <div className="sm:col-span-2 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+                  {errorMsg}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="sm:col-span-2 bg-brand-red text-white font-semibold py-4 rounded-lg hover:bg-brand-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 inline-flex flex-col items-center justify-center gap-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+              >
                 <span className="flex items-center gap-2">
-                  {en.quote.submit}
+                  {status === "submitting" ? "SENDING..." : en.quote.submit}
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </span>
                 <span className="font-arabic text-xs" dir="rtl">
