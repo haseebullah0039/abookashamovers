@@ -80,8 +80,13 @@ export async function POST(request: Request) {
     });
   } catch (err) {
     console.error("Contact form: failed to send email.", err);
+    const debugDetail = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { ok: false, error: "Failed to send your message. Please try again or call/WhatsApp us directly." },
+      {
+        ok: false,
+        error: "Failed to send your message. Please try again or call/WhatsApp us directly.",
+        debugDetail,
+      },
       { status: 502 }
     );
   }
