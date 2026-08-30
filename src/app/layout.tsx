@@ -91,9 +91,6 @@ export const metadata: Metadata = {
     description: en.meta.description,
     images: ["/hero22.webp"],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
   category: "Moving & Storage Service",
 };
 
